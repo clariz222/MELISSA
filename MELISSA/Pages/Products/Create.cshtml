@@ -1,0 +1,54 @@
+﻿@page
+@model MELISSA.Pages.Products.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<body class="Ind">
+<h1>Create</h1>
+
+<h4>Mel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mel.NameofProduct" class="control-label"></label>
+                <input asp-for="Mel.NameofProduct" class="form-control" />
+                <span asp-validation-for="Mel.NameofProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mel.Brand" class="control-label"></label>
+                <input asp-for="Mel.Brand" class="form-control" />
+                <span asp-validation-for="Mel.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mel.PurchaseDate" class="control-label"></label>
+                <input asp-for="Mel.PurchaseDate" class="form-control" />
+                <span asp-validation-for="Mel.PurchaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mel.Quantity" class="control-label"></label>
+                <input asp-for="Mel.Quantity" class="form-control" />
+                <span asp-validation-for="Mel.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mel.Price" class="control-label"></label>
+                <input asp-for="Mel.Price" class="form-control" />
+                <span asp-validation-for="Mel.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
